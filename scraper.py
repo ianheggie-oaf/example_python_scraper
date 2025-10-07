@@ -19,7 +19,7 @@ for h1 in h1s:
 if h1s:
     rows = scraperwiki.sql.select("rowid AS id, name FROM data ORDER BY rowid desc LIMIT 3")
     for row in rows:
-        print(f"{row['id']}: {row['name']}")
+        print("{}: {}".format(row['id'], row['name']))
 
 # You don't have to do things with the ScraperWiki and lxml libraries.
 # You can use whatever libraries you want: https://morph.io/documentation/python
